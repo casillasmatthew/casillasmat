@@ -1,95 +1,55 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matthew Casillas | Portfolio</title>
-  <meta name="description" content="Portfolio of Matthew Casillas, building elegant and dynamic web applications.">
+
+  <!-- SEO: Search engines read these to understand your page -->
+  <title>Your Name | Portfolio</title>
+  <meta name="description" content="A brief description of your awesome project or portfolio.">
+
+  <!-- Typography: Importing 'Inter' from Google Fonts for a premium look -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS: Link to your stylesheet (make sure you have a style.css file) -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="glow-bg"></div>
 
-  <header id="header">
-    <nav class="container">
-      <div class="logo">MC<span class="dot">.</span></div>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">MyBrand.</div>
       <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="mobile-menu-btn">
-        <span></span><span></span><span></span>
-      </div>
     </nav>
   </header>
 
+  <!-- Main Content Area -->
   <main>
-    <section id="home" class="hero container">
-      <div class="hero-content">
-        <p class="greeting">Welcome to my portfolio</p>
-        <h1 class="hero-title">Hello, I'm <span class="highlight">Matthew Casillas</span></h1>
-        <p class="hero-subtitle">I build elegant, dynamic, and performant web applications that provide exceptional user experiences.</p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn-primary">View My Work</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="glass-card">
-          <div class="card-header">
-            <span class="mac-btn red"></span>
-            <span class="mac-btn yellow"></span>
-            <span class="mac-btn green"></span>
-          </div>
-          <div class="card-body">
-            <pre><code><span class="keyword">const</span> developer = {
-  name: <span class="string">'Matthew Casillas'</span>,
-  passion: <span class="string">'Web Development'</span>,
-  skills: [<span class="string">'HTML'</span>, <span class="string">'CSS'</span>, <span class="string">'JS'</span>],
-  status: <span class="string">'Ready to build'</span>
-};</code></pre>
-          </div>
-        </div>
-      </div>
+
+    <!-- Hero Section: The first thing visitors see -->
+    <section id="hero" class="hero">
+      <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
+      <p>I build elegant and dynamic web applications.</p>
+      <a href="#projects" class="btn-primary">View My Work</a>
     </section>
 
-    <section id="projects" class="section container">
-      <div class="section-header">
-        <h2>Selected <span class="highlight">Projects</span></h2>
-        <p>A few examples of my recent work.</p>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-img-placeholder"></div>
-          <div class="project-info">
-            <h3>Project Alpha</h3>
-            <p>A dynamic web application with beautiful interactions.</p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img-placeholder"></div>
-          <div class="project-info">
-            <h3>Project Beta</h3>
-            <p>An elegant solution built for speed and conversion.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Additional sections like About, Projects goes here -->
+
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class="container footer-content">
-      <div class="logo">MC<span class="dot">.</span></div>
-      <p>&copy; 2026 Matthew Casillas. All rights reserved.</p>
-      <div class="socials">
-        <a href="#">GH</a>
-        <a href="#">LI</a>
-      </div>
-    </div>
+    <p>&copy; 2026 Your Name. Built with HTML & CSS.</p>
   </footer>
 
+  <!-- JavaScript: Link to your logic scripts at the bottom for faster page load -->
   <script src="script.js"></script>
 </body>
 </html>
