@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO: Search engines read these to understand your page -->
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="A brief description of your awesome project or portfolio.">
+  <title>Matthew Casillas | Portfolio</title>
+  <meta name="description" content="Matthew Casillas - Art 10c Portfolio">
 
-  <!-- Typography: Importing 'Inter' from Google Fonts for a premium look -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- CSS: Link to your stylesheet (make sure you have a style.css file) -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- 3D Model Viewer Library -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -32,11 +34,21 @@
   <!-- Main Content Area -->
   <main>
 
-    <!-- Hero Section: The first thing visitors see -->
-    <section id="hero" class="hero">
-      <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
-      <p>I build elegant and dynamic web applications.</p>
-      <a href="#projects" class="btn-primary">View My Work</a>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section-padding reveal">
+      <div class="container hero-content">
+        <h1 class="title">Hello, I'm <br><span class="highlight text-gradient">Matthew Casillas</span></h1>
+        <p class="description">I'm a second year at Santa Monica College and this is my Art 10c Portfolio.</p>
+        <div class="hero-cta">
+          <a href="Large%20Format%20Print.pdf" class="btn-primary" target="_blank">View My Work</a>
+          <a href="Project1.png" class="btn-secondary" target="_blank">Project 1</a>
+        </div>
+      </div>
+      <div class="hero-graphic">
+        <!-- Abstract glowing orb -->
+        <div class="orb"></div>
+        <div class="orb orb-2"></div>
+      </div>
     </section>
 
     <!-- Projects Section -->
@@ -63,10 +75,13 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Your Name. Built with HTML & CSS.</p>
+    <div class="container footer-content">
+      <div class="footer-logo">MC<span class="highlight">.</span></div>
+      <p class="copyright">&copy; 2026 Matthew Casillas.</p>
+    </div>
   </footer>
 
-  <!-- JavaScript: Link to your logic scripts at the bottom for faster page load -->
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
