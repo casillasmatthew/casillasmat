@@ -14,6 +14,9 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- 3D Model Viewer Library -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -41,6 +44,22 @@
         <!-- Abstract glowing orb -->
         <div class="orb"></div>
         <div class="orb orb-2"></div>
+      </div>
+    </section>
+
+    <!-- 3D Model Section -->
+    <section id="3d-model" class="model-container section-padding reveal">
+      <div class="container">
+        <h2 class="section-title text-center">3D Artifact <span class="highlight">Study</span></h2>
+        <div class="divider center"></div>
+        <model-viewer
+            src="museum.glb"
+            alt="A 3D model of a creative artifact"
+            shadow-intensity="1"
+            camera-controls
+            auto-rotate
+            ar>
+        </model-viewer>
       </div>
     </section>
 
