@@ -2,14 +2,14 @@
    VARIABLES & SETUP
 ========================================= */
 :root {
-  /* Colors - Minimalist Palette */
-  --bg-color: #FAFAFA;
-  --bg-light: #F0F0F0;
-  --text-primary: #1A1A1A;
-  --text-secondary: #555555;
-  --accent-color: #222222;
-  --accent-hover: #444444;
-  --border-color: #E0E0E0;
+  /* Colors - Earthy & Neutral Palette */
+  --bg-color: #F7F5F0;       /* Warm off-white / light beige */
+  --bg-light: #EDEBE4;       /* Soft warm gray for alternate sections */
+  --text-primary: #2D2C2A;   /* Dark brownish-gray for strong readability */
+  --text-secondary: #605E59; /* Medium warm gray for descriptions */
+  --accent-color: #5B6B56;   /* Neutral sage/olive green */
+  --accent-hover: #465342;   /* Darker olive green for hover states */
+  --border-color: #DCD8D0;   /* Light brownish-gray for borders */
   --white: #FFFFFF;
 
   /* Typography */
@@ -59,6 +59,7 @@ h1, h2, h3, h4 {
   font-size: clamp(3rem, 8vw, 5rem);
   letter-spacing: -0.02em;
   margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
 }
 
 .section-title {
@@ -66,6 +67,7 @@ h1, h2, h3, h4 {
   margin-bottom: var(--spacing-lg);
   text-align: center;
   font-weight: 500;
+  color: var(--text-primary);
 }
 
 p {
@@ -98,11 +100,11 @@ header {
   left: 0;
   width: 100%;
   padding: 1.5rem 0;
-  background: rgba(250, 250, 250, 0.8);
+  background: rgba(247, 245, 240, 0.85); /* Matches --bg-color but transparent */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(45, 44, 42, 0.05);
   transition: all 0.3s ease;
 }
 
@@ -117,7 +119,7 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--text-primary);
+  color: var(--accent-color); /* Logo in green */
   text-decoration: none;
 }
 
@@ -162,6 +164,7 @@ nav {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(91, 107, 86, 0.2);
 }
 
 .btn-secondary {
@@ -172,7 +175,7 @@ nav {
 
 .btn-secondary:hover {
   border-color: var(--accent-color);
-  background-color: rgba(0,0,0,0.03);
+  background-color: rgba(91, 107, 86, 0.05);
   transform: translateY(-2px);
 }
 
@@ -230,7 +233,7 @@ nav {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  box-shadow: 0 15px 35px rgba(45, 44, 42, 0.08);
 }
 
 .project-image-wrapper {
@@ -238,7 +241,7 @@ nav {
   overflow: hidden;
   background-color: var(--bg-light);
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem; /* slightly larger frame */
 }
 
 .project-image {
@@ -250,11 +253,12 @@ nav {
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.03); /* Slightly reduced the scale effect so it feels more natural with object-fit: contain */
+  transform: scale(1.03);
 }
 
 .project-info {
   padding: 1.5rem;
+  background-color: var(--white);
 }
 
 .project-info h3 {
@@ -278,14 +282,14 @@ nav {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-color);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+  box-shadow: 0 20px 40px rgba(45, 44, 42, 0.05);
 }
 
 model-viewer {
   width: 100%;
   height: 100%;
   --poster-color: transparent;
-  background-color: #f5f5f5;
+  background-color: var(--bg-color);
 }
 
 /* =========================================
@@ -305,7 +309,7 @@ model-viewer {
 ========================================= */
 footer {
   padding: var(--spacing-md) 0;
-  background-color: var(--bg-color);
+  background-color: var(--bg-light); /* Ground the footer in the slightly darker tone */
   border-top: 1px solid var(--border-color);
 }
 
@@ -319,7 +323,7 @@ footer {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--text-primary);
+  color: var(--accent-color);
 }
 
 .copyright {
