@@ -10,7 +10,7 @@
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -22,10 +22,11 @@
 
   <!-- Navigation Bar -->
   <header>
-    <nav>
-      <div class="logo">MyBrand.</div>
+    <nav class="container">
+      <a href="#" class="logo">MC.</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -35,33 +36,41 @@
   <main>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section-padding reveal">
+    <section id="hero" class="hero section-padding">
       <div class="container hero-content">
-        <h1 class="title">Hello, I'm <br><span class="highlight text-gradient">Matthew Casillas</span></h1>
-        <p class="description">I'm a second year at Santa Monica College and this is my Art 10c Portfolio.</p>
+        <h1 class="title">Matthew Casillas</h1>
+        <p class="description">Second Year Student at Santa Monica College &bull; Art 10c Portfolio</p>
         <div class="hero-cta">
-          <a href="Large%20Format%20Print.pdf" class="btn-primary" target="_blank">View My Work</a>
-          <a href="#projects" class="btn-secondary">View Project 1</a>
+          <a href="Large%20Format%20Print.pdf" class="btn btn-primary" target="_blank">View My Work</a>
+          <a href="#projects" class="btn btn-secondary">Explore Projects</a>
         </div>
       </div>
-      <div class="hero-graphic">
-        <!-- Abstract glowing orb -->
-        <div class="orb"></div>
-        <div class="orb orb-2"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding background-light">
+      <div class="container section-container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>Hi, I'm Matthew. I am passionate about creating meaningful art and exploring different mediums. This portfolio showcases my projects and studies from Art 10c, focusing on creative exploration and technical execution.</p>
+        </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="section-container">
-        <h2>Featured Work</h2>
+    <section id="projects" class="section-padding">
+      <div class="container section-container">
+        <h2 class="section-title">Featured Work</h2>
         <div class="project-grid">
 
-          <!-- Project 1 (Image displayed directly on the site, 25% width) -->
+          <!-- Project 1 -->
           <div class="project-card">
-            <img src="Project1.png" alt="Project 1 preview" class="project-image" style="max-width: 25%; border-radius: 8px;">
+            <div class="project-image-wrapper">
+              <img src="Project1.png" alt="Project 1 preview" class="project-image">
+            </div>
             <div class="project-info">
               <h3>Project 1</h3>
+              <p>An exploration of form and texture.</p>
             </div>
           </div>
 
@@ -70,16 +79,29 @@
     </section>
 
     <!-- 3D Artifact Study Section -->
-    <section class="model-container">
-        <h2>3D Artifact Study</h2>
-        <model-viewer
-            src="museum.glb"
-            alt="A 3D model of a creative artifact"
-            shadow-intensity="1"
-            camera-controls
-            auto-rotate
-            ar>
-        </model-viewer>
+    <section class="section-padding background-light model-section">
+      <div class="container section-container">
+        <h2 class="section-title">3D Artifact Study</h2>
+        <div class="model-wrapper">
+          <model-viewer
+              src="museum.glb"
+              alt="A 3D model of a creative artifact"
+              shadow-intensity="1"
+              camera-controls
+              auto-rotate
+              ar>
+          </model-viewer>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding contact-section">
+      <div class="container section-container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>Interested in collaborating or want to learn more about my work?</p>
+        <a href="mailto:contact@example.com" class="btn btn-primary">Email Me</a>
+      </div>
     </section>
 
   </main>
@@ -87,12 +109,10 @@
   <!-- Footer -->
   <footer>
     <div class="container footer-content">
-      <div class="footer-logo">MC<span class="highlight">.</span></div>
-      <p class="copyright">&copy; 2026 Matthew Casillas.</p>
+      <div class="footer-logo">MC.</div>
+      <p class="copyright">&copy; 2026 Matthew Casillas. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>
