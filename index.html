@@ -21,9 +21,13 @@
 <body>
 
   <!-- Navigation Bar -->
-  <header id="navbar">
-    <nav class="container">
-      <div class="logo">MC<span class="highlight">.</span></div>
+  <header>
+    <nav>
+      <div class="logo">MyBrand.</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -37,7 +41,7 @@
         <p class="description">I'm a second year at Santa Monica College and this is my Art 10c Portfolio.</p>
         <div class="hero-cta">
           <a href="Large%20Format%20Print.pdf" class="btn-primary" target="_blank">View My Work</a>
-          <a href="Project1.png" class="btn-secondary" target="_blank">Project 1</a>
+          <a href="#projects" class="btn-secondary">View Project 1</a>
         </div>
       </div>
       <div class="hero-graphic">
@@ -47,11 +51,27 @@
       </div>
     </section>
 
-    <!-- 3D Model Section -->
-    <section id="3d-model" class="model-container section-padding reveal">
-      <div class="container">
-        <h2 class="section-title text-center">3D Artifact <span class="highlight">Study</span></h2>
-        <div class="divider center"></div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="section-container">
+        <h2>Featured Work</h2>
+        <div class="project-grid">
+
+          <!-- Project 1 (Image displayed directly on the site, 25% width) -->
+          <div class="project-card">
+            <img src="Project1.png" alt="Project 1 preview" class="project-image" style="max-width: 25%; border-radius: 8px;">
+            <div class="project-info">
+              <h3>Project 1</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Artifact Study Section -->
+    <section class="model-container">
+        <h2>3D Artifact Study</h2>
         <model-viewer
             src="museum.glb"
             alt="A 3D model of a creative artifact"
@@ -60,7 +80,6 @@
             auto-rotate
             ar>
         </model-viewer>
-      </div>
     </section>
 
   </main>
