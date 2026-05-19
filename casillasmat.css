@@ -3,13 +3,13 @@
 ========================================= */
 :root {
   /* Colors - Earthy & Neutral Palette */
-  --bg-color: #F7F5F0;       /* Warm off-white / light beige */
-  --bg-light: #EDEBE4;       /* Soft warm gray for alternate sections */
-  --text-primary: #2D2C2A;   /* Dark brownish-gray for strong readability */
-  --text-secondary: #605E59; /* Medium warm gray for descriptions */
-  --accent-color: #5B6B56;   /* Neutral sage/olive green */
-  --accent-hover: #465342;   /* Darker olive green for hover states */
-  --border-color: #DCD8D0;   /* Light brownish-gray for borders */
+  --bg-color: #F9F6F0;       /* Warmer sandstone / light beige */
+  --bg-light: #EBE5D9;       /* Deeper earthy beige for alternate sections */
+  --text-primary: #38312B;   /* Deep charcoal brown */
+  --text-secondary: #73675C; /* Warm taupe/mushroom */
+  --accent-color: #A66E4E;   /* Rich terracotta / clay */
+  --accent-hover: #8A5A3F;   /* Darker baked earth */
+  --border-color: #DCD3C6;   /* Sand background for borders */
   --white: #FFFFFF;
 
   /* Typography */
@@ -100,11 +100,11 @@ header {
   left: 0;
   width: 100%;
   padding: 1.5rem 0;
-  background: rgba(247, 245, 240, 0.85); /* Matches --bg-color but transparent */
+  background: rgba(249, 246, 240, 0.85); /* Matches --bg-color but transparent */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(45, 44, 42, 0.05);
+  border-bottom: 1px solid rgba(56, 49, 43, 0.05); /* Adjusted to match text-primary */
   transition: all 0.3s ease;
 }
 
@@ -119,7 +119,7 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--accent-color); /* Logo in green */
+  color: var(--accent-color); /* Logo in terracotta */
   text-decoration: none;
 }
 
@@ -164,7 +164,7 @@ nav {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(91, 107, 86, 0.2);
+  box-shadow: 0 4px 12px rgba(166, 110, 78, 0.2); /* Updated shadow for terracotta */
 }
 
 .btn-secondary {
@@ -175,7 +175,7 @@ nav {
 
 .btn-secondary:hover {
   border-color: var(--accent-color);
-  background-color: rgba(91, 107, 86, 0.05);
+  background-color: rgba(166, 110, 78, 0.05); /* Updated hover tint */
   transform: translateY(-2px);
 }
 
@@ -233,7 +233,7 @@ nav {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(45, 44, 42, 0.08);
+  box-shadow: 0 15px 35px rgba(56, 49, 43, 0.08); /* Adjusted to match text-primary */
 }
 
 .project-image-wrapper {
@@ -282,7 +282,7 @@ nav {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-color);
-  box-shadow: 0 20px 40px rgba(45, 44, 42, 0.05);
+  box-shadow: 0 20px 40px rgba(56, 49, 43, 0.05); /* Adjusted to match text-primary */
 }
 
 model-viewer {
