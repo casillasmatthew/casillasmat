@@ -36,7 +36,7 @@
   <main>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section-padding">
+    <section id="hero" class="hero section-padding fade-in">
       <div class="container hero-content">
         <h1 class="title">Matthew Casillas</h1>
         <p class="description">Second Year Student at Santa Monica College &bull; Art 10c Portfolio</p>
@@ -46,8 +46,8 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding background-light">
+    <!-- About Section - NOW PROMINENT GREEN -->
+    <section id="about" class="section-padding prominent-section fade-in">
       <div class="container section-container">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
@@ -57,7 +57,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section-padding">
+    <section id="projects" class="section-padding fade-in">
       <div class="container section-container">
         <h2 class="section-title">Featured Work</h2>
         <div class="project-grid">
@@ -78,33 +78,31 @@
     </section>
 
     <!-- 3D Artifact Study Section -->
-  <section class="section-padding background-light model-section">
-    <div class="container section-container">
-      <h2 class="section-title">3D Artifact Study</h2>
-      <div class="model-wrapper">
-        <!-- Updated src to point to the new compressed model -->
-        <model-viewer
-            src="smallermodel.glb"
-            alt="A 3D model of a creative artifact"
-            shadow-intensity="1"
-            camera-controls
-            auto-rotate
-            ar>
-        </model-viewer>
+    <section class="section-padding background-light model-section fade-in">
+      <div class="container section-container">
+        <h2 class="section-title">3D Artifact Study</h2>
+        <div class="model-wrapper hover-lift">
+          <model-viewer
+              src="smallermodel.glb"
+              alt="A 3D model of a creative artifact"
+              shadow-intensity="1"
+              camera-controls
+              auto-rotate
+              ar>
+          </model-viewer>
+        </div>
+        <div class="project-info hover-lift" style="margin-top: 1rem; background: var(--white); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <p style="padding: 1.5rem; text-align: center;">For this project I 3D modeled a little cat plush keychain I own. After creating the model in blender I added image textures in order to make it look robotic.</p>
+        </div>
       </div>
-      <div class="project-info">
-        <p>For this project I 3D modeled a little cat plush keychain I own. After creating the model in blender I added image textures in order to make it look robotic.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding contact-section">
+    <!-- Contact Section - NOW PROMINENT GREEN -->
+    <section id="contact" class="section-padding contact-section prominent-section fade-in">
       <div class="container section-container">
         <h2 class="section-title">Get In Touch</h2>
         <p>Interested in collaborating or want to learn more about my work?</p>
-        <a href="mailto:contact@example.com" class="btn btn-primary">Email Me</a>
+        <a href="mailto:contact@example.com" class="btn btn-secondary white-btn">Email Me</a>
       </div>
     </section>
 
@@ -118,5 +116,22 @@
     </div>
   </footer>
 
+  <!-- Light interactive script for scroll animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) { return; } else {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => { appearOnScroll.observe(fader); });
+    });
+  </script>
 </body>
 </html>
