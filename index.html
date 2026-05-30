@@ -23,6 +23,13 @@
 
   <!-- 3D Model Viewer Library -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+  <!-- Prevent video cropping in fullscreen and standard modes -->
+  <style>
+    video, video:fullscreen, video::-webkit-media-controls-enclosure {
+      object-fit: contain !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -107,15 +114,14 @@
     <section class="section-padding video-section fade-in">
       <div class="container section-container">
         <div class="model-wrapper hover-lift" style="max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; background: #000; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.04);">
-          <video width="100%" height="100%" style="object-fit: contain; display: block; background: #000;" controls muted autoplay loop>
-            <source src="Project3_hd.mp4?v=3" type="video/mp4; codecs=hevc">
-            <source src="Project3.mp4?v=3" type="video/mp4">
+          <video width="100%" height="100%" style="object-fit: contain !important; display: block; background: #000;" controls muted autoplay loop>
+            <source src="%22what%20are%20you%20always%20thinking%20about%3F%22.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="project-info hover-lift" style="margin-top: 1rem; background: var(--white); border-radius: var(--radius-md); border: 1px solid var(--border-color); padding: 1.5rem; text-align: left; max-width: 900px; margin-left: auto; margin-right: auto;">
           <h3>Project 3</h3>
-          <p style="margin-top: 0.5rem;">For this project I created a video showcasing commen sights in my everyday life. But with added text I made it so it's a personal little monologue, that lets the viewer peep into what goes on what I'm always thinking about. With a view basic transitions and text affects, plus copyright free music I wanted to make this little slice of life video as authentic to me as possible.</p>
+          <p style="margin-top: 0.5rem;">For this project I created a video showcasing common sights in my everyday life. But with added text I made it so it's a personal little monologue, that lets the viewer peep into what goes on what I'm always thinking about. With a view basic transitions and text affects, plus copyright free music I wanted to make this little slice of life video as authentic to me as possible.</p>
         </div>
       </div>
     </section>
